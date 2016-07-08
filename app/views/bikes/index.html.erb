@@ -16,6 +16,12 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  font-size: 200%;
+  font-family: helevica;
+  text-align: center;
+}
+
 ul {
   list-style-type: disc;
   text-align: center;
@@ -28,10 +34,10 @@ ul {
     margin:0 auto;
     text-align:left;
 }
-</style>
 </head>
 
-<body>
+<body></style>
+
 
 
 <h1 >Cycle to Great Places</h1>
@@ -46,6 +52,13 @@ ul {
         <li>Seven</li>
         <li>Giant</li>
     </ul>
+<div class="center">  
+  <h2>More Bikes</h2>  
+  <% @bikes.each do |bike| %>  
+    <h3><%= link_to bike.name, bike_path(bike) %></h3>
+    <h3><%= bike.description %></h3>
+  <% end %>  
+</div>
 
 </body>
 </html>
