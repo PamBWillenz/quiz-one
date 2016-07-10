@@ -1,64 +1,9 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-<style>
-h1 {
-  color: blue;
-  font-family: helevica; 
-  font-size: 500%;
-  text-align: center;
-}
-
-h2 {
-  font-size: 350%;
-  font-family: helevica;
-  text-align: center;
-}
-
-h3 {
-  font-size: 200%;
-  font-family: helevica;
-  text-align: center;
-}
-
-ul {
-  list-style-type: disc;
-  text-align: center;
-  font-family: helevica;
-  font-size: 350%;
-}
-
-.center{
-    width:200px;
-    margin:0 auto;
-    text-align:left;
-}
-</head>
-
-<body></style>
-
-
-
-<h1 >Cycle to Great Places</h1>
-
-
-  <h2>Bikes Galore</h2>
-    <ul class="center">
-        <li>Specialized</li>
-        <li>Bianchi</li>
-        <li>BMX</li>
-        <li>Trek</li>
-        <li>Seven</li>
-        <li>Giant</li>
+<div>
+  <h1>Bikes in the Tour De France</h1> 
+  <% @bikes.each do |bike| %> 
+    <ul class="center">  
+      <li><%= link_to bike.name, bike_path(bike) %></li> -- <%= bike.description %>
     </ul>
-<div class="center">  
-  <h2>More Bikes</h2>  
-  <% @bikes.each do |bike| %>  
-    <h3><%= link_to bike.name, bike_path(bike) %></h3>
-    <h3><%= bike.description %></h3>
   <% end %>  
 </div>
 
-</body>
-</html>
