@@ -1,5 +1,5 @@
 <div>
-  <h1>Bikes in the Tour De France</h1> 
+  <h1>Bikes in the Tour de France</h1> 
   <% @bikes.each do |bike| %> 
     <ul class="center">  
       <li><%= link_to bike.name, bike_path(bike) %></li> -- <%= bike.description %>

@@ -1,8 +1,10 @@
 <h1>Enter Bike Details</h1>
 <%= simple_form_for @bike do |f| %>
+  <label>
   <%= f.input :name %>
   <br /><br />
   <%= f.input :description %>
   <br />
   <%= f.submit 'Create' %>
+</label>
 <% end %>  
